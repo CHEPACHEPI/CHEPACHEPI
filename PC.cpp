@@ -18,7 +18,7 @@ void producer(){
 void consumer(){
     for(int i=0;i<5;i++){
         mtx.lock();
-        buffer++;
+        buffer--;
         cout<<"consumed:"<<buffer<<endl;
         usleep(1000);
         mtx.unlock();
